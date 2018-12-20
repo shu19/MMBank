@@ -2,17 +2,19 @@ package com.mmbank.account;
 
 public abstract class BankAccount {
 
-	private final int accountNumber;
+	private final int accountNumber; 
 	private String accountName;
 	private double accountBalance;
 
 	
 	private static int highestAccountId;
 	
+	//Here initial account id is initialized
 	static{
 		highestAccountId=100;
 	}
-	
+
+	//Whenever new object is created accountNumber is generated usding highestAccountId 
 	{
 		accountNumber=++highestAccountId;
 	}
@@ -22,10 +24,11 @@ public abstract class BankAccount {
 		this.accountBalance = accountBalance;
 	}
 
-	public abstract void withdraw(double amount);
+	
+	public abstract void withdraw(double amount) throws Exception;
 
 	public void deposit(double amount) {
-
+		this.accountBalance+=amount;
 	}
 
 	@Override
