@@ -7,8 +7,7 @@ import org.apache.log4j.Logger;
 public class MMCurrentAccount extends CurrentAccount {
 
 	Logger logger= Logger.getLogger(MMCurrentAccount.class);
-	
-	
+		
 	/**
 	 * @param accountName
 	 * @param accountBalance
